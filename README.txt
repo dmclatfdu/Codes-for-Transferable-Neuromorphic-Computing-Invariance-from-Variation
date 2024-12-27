@@ -1,4 +1,4 @@
-This is the readme file for the codes for Making Physical Reservoir Computing Transferable.
+This is the readme file for the codes for Invariant from variations: Transferable Neuromorphic Computing.
 
 There are six code files and a data file in total, which are:
 
