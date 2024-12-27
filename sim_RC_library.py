@@ -7,7 +7,7 @@ It includes the following modules:
 (3) Standard benchmark experiment, here we use the Mackey-Glass chaotic series one-step prediction;
 (4) Real-world demo, here we use the MIT-BIH Arrhythmia Database for the arrhythmia detection.
 
-Zefeng Zhang, Research Institute of Intelligent Complex Systems and ISTBI, Fudan Univ.
+Zefeng Zhang, Research Institute of Intelligent Complex Systems and Frontier Institute of Chip and System, Fudan Univ.
 
 """
 from base_library import *
