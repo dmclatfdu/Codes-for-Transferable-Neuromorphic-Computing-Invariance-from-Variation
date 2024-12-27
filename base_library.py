@@ -1,6 +1,6 @@
 
 """
-This is the library file for basic functions and operations in the work Make Physical Reservoir Computing Transferable
+This is the library file for basic functions and operations in the work Invariant from Variations: Transferable Neuromorphic Computing
 
 Zefeng Zhang, Research Institute of Intelligent Complex Systems & Frontier Institute for Chip and System, Fudan Univ.
 
