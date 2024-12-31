@@ -1,6 +1,6 @@
 
 """
-This is the library file for basic functions and operations in the work Invariant from Variations: Transferable Neuromorphic Computing
+This is the library file for basic functions and operations in the work Transferable Neuromorphic Computing: Invariance from Variation
 
 Zefeng Zhang, Research Institute of Intelligent Complex Systems & Frontier Institute of Chip and System, Fudan Univ.
 
