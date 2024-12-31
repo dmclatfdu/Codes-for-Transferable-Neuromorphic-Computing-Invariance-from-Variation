@@ -1,4 +1,4 @@
-This is the readme file for the codes for Invariant from Variations: Transferable Neuromorphic Computing.
+This is the readme file for the codes for Transferable Neuromorphic Computing: Invariance from Variation.
 
 There are six code files and a data file in total, which are:
 
