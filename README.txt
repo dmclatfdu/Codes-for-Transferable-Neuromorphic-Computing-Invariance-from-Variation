@@ -25,10 +25,10 @@ The RC_Lorenz.py stores the programs for the Lorenz recurrent prediction.
 
 The RC_arrhythmia.py stores the programs for arrhythmia detection task based on the MITBIH database. The code is modified from that from Codes in NE2022 of https://github.com/Tsinghua-LEMON-Lab/Reservoir-computing
 
-#NOTE: The code in RC_arrhythmia.py would take a lot of time.#
+#NOTE: The code in RC_arrhythmia.py would take a lot of time, about 3-4 days on a desktop CPU (we use the AMD Ryzen 5800H).#
 #NOTE: PLEASE RUN THE CODES AS THE WAY THEY ARE ORDERED TO ENSURE THE FILES NEEDED FOR THE FOLLOWING STEPS ARE CREATED#
 
 The ECGdataset.mat is the ECG dataset of heartbeat records, with reference to MITBIH Arrhythmia Database and research paper, A memristor-based analogue reservoir computing system for real-time and power-efficient signal processing, published in Nature Electronics.
 
 To run the codes, the following libraries are required:
-SciPy, tqdm, NumPy, Pandas, Seaborn, Matplotlib, Scikit-Learn, mpl_toolkits, h5py
+SciPy (1.7.1), tqdm (4.62.3), NumPy (1.22.4), Pandas (1.3.4), Seaborn (0.12.2), Matplotlib (3.4.3), Scikit-Learn (1.0.1), h5py (3.7.0)
