@@ -1,8 +1,8 @@
 
 """
-This is the library file for basic functions and operations in the work Transferable Neuromorphic Computing: Invariance from Variation
+This is the library file for basic functions and operations in the work Make Physical Reservoir Computing Transferable
 
-Zefeng Zhang, Research Institute of Intelligent Complex Systems & Frontier Institute of Chip and System, Fudan Univ.
+Zefeng Zhang, Research Institute of Intelligent Complex Systems & Frontier Institute for Chip and System, Fudan Univ.
 
 """
 

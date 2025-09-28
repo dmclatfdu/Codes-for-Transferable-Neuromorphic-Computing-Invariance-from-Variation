@@ -7,12 +7,10 @@ It includes the following modules:
 (3) Standard benchmark experiment, here we use the Mackey-Glass chaotic series one-step prediction;
 (4) Real-world demo, here we use the MIT-BIH Arrhythmia Database for the arrhythmia detection.
 
-Zefeng Zhang, Research Institute of Intelligent Complex Systems and Frontier Institute of Chip and System, Fudan Univ.
+Zefeng Zhang, Research Institute of Intelligent Complex Systems and ISTBI, Fudan Univ.
 
 """
 from base_library import *
-import numpy as np
-
 import h5py
 
 
@@ -105,6 +103,7 @@ class TiOx_SRC:  # The SRC stands for the switching RC operation in the temporal
         tau = kwargs.get('tau', self.tau)
         tau0 = kwargs.get('tau0', self.tau0)
         g00 = kwargs.get('g00', self.g00)
+        tqdm_on = kwargs.get('tqdm_on', True)
         virtual_nodes = kwargs.get('virtual_nodes', 10)
         C2C_strength = kwargs.get('C2C_strength', 0.01e-5)
         clear = kwargs.get('clear', False)  # Clear the memory before the processing of given signal
@@ -120,10 +119,16 @@ class TiOx_SRC:  # The SRC stands for the switching RC operation in the temporal
             self.g = self.g00
 
         # Counter
-        for i in tqdm(range(len(V))):
+        if tqdm_on:
+            AAA = tqdm(range(len(V)))
+        else:
+            AAA = range(len(V))
+        for i in AAA:
 
-            if i % virtual_nodes == 0:
-                k3 = k3_0 + C2C_strength * np.random.randn()
+            # if i % virtual_nodes == 0:
+            #     k3 = k3_0 + C2C_strength * np.random.randn()
+
+            k3 = k3_0 + C2C_strength * np.random.randn()
 
             for j in range(multiple_iteration):
                 self.g, self.g0, _ = RK_iteration(TiOx_SRC.TiOx_dynamic, np.array([self.g, self.g0, 0]),
