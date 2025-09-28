@@ -3,7 +3,7 @@
 
 
 ## 📁 File Structure
-There are six code files and a data folder in total, which are:
+There are nine code files and a data folder in total, which are:
 ### Program files
 | File Name | Description |
 |-----------|-------------|
@@ -36,6 +36,7 @@ The data file folder stores the **experimentally measured data**. It will also s
 #### II. The code in RC_arrhythmia.py would take a lot of time, about 3-4 days (we use the AMD Ryzen 5800H and the Intel Core i5-14600KF).
 
 #### III. The librosa library (used in RC_Voice_Sim.py) often meets the problem: osError cannot load library 'libsndfile.dll':error 0x7e. To solve this problem, you may have to manually do the following steps: (1) locate the directory which reports the error (when using anaconda to create an environment, it is most likely .conda/envs/your_env_name/Lib/site-packages); (2) create a folder named _soundfile_data in the directory; (3) put the file libsndfile_64bit.dll (provided in this repository) in the _soundfile_data folder. After the above procedures, run the code again to check if the problem is fixed.
+
 
 
 
