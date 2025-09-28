@@ -21,7 +21,7 @@ There are nine code files and a data folder in total, which are:
 ### Data file folder
 The data file folder stores the **experimentally measured data**. It will also stores the results of RC when running the above programs. We are willing to provide the whole experimental data to the editors and reviewers. In the following describes the basic information of the data (file/folder name shown in the detailed directory).
 
-| File Name | Description |
+| File/Folder Name | Description |
 |-----------|-------------|
 | `Data/Arrhythmia/ECGdataset.mat` | Processed **ECG heartbeat** records dataset (copied from https://github.com/Tsinghua-LEMON-Lab/Reservoir-computing)|
 | `Data/Characterization` | The folder for the **characterization (IV/Pulse/Decay) results** of the TiOx and NbOx devices |
@@ -37,6 +37,7 @@ The data file folder stores the **experimentally measured data**. It will also s
 #### III. The code in RC_Arrhythmia.py would take a lot of time, about 3-4 days (we use the AMD Ryzen 5800H and the Intel Core i5-14600KF).
 
 #### IV. The librosa library (used in RC_Voice_Sim.py) often meets the problem: osError cannot load library 'libsndfile.dll':error 0x7e. To solve this problem, you may have to manually do the following steps: (1) locate the directory which reports the error (when using anaconda to create an environment, it is most likely .conda/envs/your_env_name/Lib/site-packages); (2) create a folder named _soundfile_data in the directory; (3) put the file libsndfile_64bit.dll (provided in this repository) in the _soundfile_data folder. After the above procedures, run the code again to check if the problem is fixed.
+
 
 
 
