@@ -30,11 +30,12 @@ The data file folder stores the **experimentally measured data**. It will also s
 
 --------
 
-## Notice
+## ⚠️ Notice
 #### I. To run the programs successfully, the following libraries are required: SciPy (1.7.1), tqdm (4.62.3), NumPy (1.22.4), Pandas (1.3.4), Seaborn (0.12.2), Matplotlib (3.4.3), Scikit-Learn (1.0.1), h5py (3.7.0), librosa (0.10.0).
 
 #### II. The code in RC_arrhythmia.py would take a lot of time, about 3-4 days on a desktop CPU (we use the AMD Ryzen 5800H).
 
 #### III. The librosa library often meets the problem: osError cannot load library 'libsndfile.dll':error 0x7e. To solve this problem, you may have to manually do the following steps: (1) locate the directory which reports the error (when using anaconda to create an environment, it is most likely .conda/envs/your_env_name/Lib/site-packages); (2) create a folder named _soundfile_data in the directory; (3) put the file libsndfile_64bit.dll in the _soundfile_data folder. After the above procedures, run the code again to check whether the problem is fixed or not.
+
 
 
