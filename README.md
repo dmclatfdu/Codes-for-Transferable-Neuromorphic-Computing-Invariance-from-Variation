@@ -1,37 +1,40 @@
 # Transferable Neuromorphic Computing: Invariance from Variation
 
-There are six code files and a data file in total, which are:
 
-base_library.py  
-sim_RC_library.py  
-device_characteristics.py  
-RC_MG.py  
-RC_Lorenz.py  
-RC_arrhythmia.py  
-ECGdataset.mat  
 
-Before you run any of these files please make sure that they are all in the directory '/Source data', the data folder we shared.
-Eg., '/Source data/RC_MG.py'
+## 📁 File Structure
+There are six code files and a data folder in total, which are:
+### Program files
+| File Name | Description |
+|-----------|-------------|
+| `base_library.py` | Basic functions used across all program files |
+| `sim_RC_library.py` | Simulated TiOx-based RC **initial settings & pre-processing** |
+| `device_characteristics.py` | Experimental device **characterizations** & simulated reproduction |
+| `RC_MG.py` | **Mackey-Glass** one-step prediction tasks |
+| `RC_Lorenz.py` | **Lorenz system** recurrent prediction |
+| `RC_arrhythmia.py` | **Arrhythmia** detection (demonstrated on the ECG heartbeat dataset below), modified from Codes in NE2022 of https://github.com/Tsinghua-LEMON-Lab/Reservoir-computing|
+| `RC_Voice_Sim.py` |  **Simulated spoken digit classification**  |
+| `RC_Voice_Exp.py` |  **Experimental spoken digit classification**|
+| `Voice_Inputs.py` | The **supporting files** for input signal generation for **experimental RC** in the spoken digit classification|
 
-The base_library.py stores the basic functions used in all other programs.
+---
+### Data file folder
+The data file folder stores the **experimentally measured data**. It will also stores the results of RC when running the above programs. We are willing to provide the whole experimental data to the editors and reviewers. In the following describes the basic information of the data (file/folder name shown in the detailed directory).
 
-The sim_RC_library stores the initial settings of the simulated TiOx-based RC and the related pre-processing procedures.
+| File Name | Description |
+|-----------|-------------|
+| `Data/Arrhythmia/ECGdataset.mat` | Processed **ECG heartbeat** records dataset (copied from https://github.com/Tsinghua-LEMON-Lab/Reservoir-computing)|
+| `Data/Characterization` | The folder for the **characterization (IV/Pulse/Decay) results** of the TiOx and NbOx devices |
+| `Data/MG/Exp/TiOx` | The experimental data for the **MG task with TiOx-based RC**, including the generated voltage signal files on the Keysight B1500A and the measured responses. |
+| `Data/Voice/Exp` | The experimental data for the **spoken digit classification with TiOx/NbOx-based RC**, including the generated voltage signal files on the Keysight B1500A and the measured responses. |
 
-The device_character.py stores the analysis of experiment data and the corresponding reproduction through simulation.
+--------
 
-The RC_MG.py stores all programs related to the MG one-step prediction in the paper.
+## Notice
+#### I. To run the programs successfully, the following libraries are required: SciPy (1.7.1), tqdm (4.62.3), NumPy (1.22.4), Pandas (1.3.4), Seaborn (0.12.2), Matplotlib (3.4.3), Scikit-Learn (1.0.1), h5py (3.7.0), librosa (0.10.0).
 
-The RC_Lorenz.py stores the programs for the Lorenz recurrent prediction.
+#### II. The code in RC_arrhythmia.py would take a lot of time, about 3-4 days on a desktop CPU (we use the AMD Ryzen 5800H).
 
-The RC_arrhythmia.py stores the programs for arrhythmia detection task based on the MITBIH database. The code is modified from that from Codes in NE2022 of https://github.com/Tsinghua-LEMON-Lab/Reservoir-computing
-
-#NOTE: The code in RC_arrhythmia.py would take a lot of time, about 3-4 days on a desktop CPU (we use the AMD Ryzen 5800H).#
-#NOTE: PLEASE RUN THE CODES AS THE WAY THEY ARE ORDERED TO ENSURE THE FILES NEEDED FOR THE FOLLOWING STEPS ARE CREATED#
-
-The ECGdataset.mat is the ECG dataset of heartbeat records, with reference to MITBIH Arrhythmia Database and research paper, A memristor-based analogue reservoir computing system for real-time and power-efficient signal processing, published in Nature Electronics.
-
-To run the codes, the following libraries are required:
-SciPy (1.7.1), tqdm (4.62.3), NumPy (1.22.4), Pandas (1.3.4), Seaborn (0.12.2), Matplotlib (3.4.3), Scikit-Learn (1.0.1), h5py (3.7.0)
-
+#### III. The librosa library often meets the problem: osError cannot load library 'libsndfile.dll':error 0x7e. To solve this problem, you may have to manually do the following steps: (1) locate the directory which reports the error (when using anaconda to create an environment, it is most likely .conda/envs/your_env_name/Lib/site-packages); (2) create a folder named _soundfile_data in the directory; (3) put the file libsndfile_64bit.dll in the _soundfile_data folder. After the above procedures, run the code again to check whether the problem is fixed or not.
 
 
