@@ -17,7 +17,7 @@ There are nine code files and a data folder in total, which are:
 | `RC_Voice_Exp.py` |  **Experimental spoken digit classification**|
 | `Voice_Inputs.py` | The **supporting files** for input signal generation for **experimental RC** in the spoken digit classification|
 
----
+
 ### Data file folder
 The data file folder stores the **experimentally measured data**. It will also stores the results of RC when running the above programs. We are willing to provide the whole experimental data to the editors and reviewers. In the following describes the basic information of the data (file/folder name shown in the detailed directory).
 
@@ -28,7 +28,6 @@ The data file folder stores the **experimentally measured data**. It will also s
 | `Data/MG/Exp/TiOx` | The experimental data for the **MG task with TiOx-based RC**, including the generated voltage signal files on the Keysight B1500A and the measured responses. |
 | `Data/Voice/Exp` | The experimental data for the **spoken digit classification with TiOx/NbOx-based RC**, including the generated voltage signal files on the Keysight B1500A and the measured responses. |
 
---------
 
 ## ⚠️ Notice
 #### I. To run the programs successfully, the following libraries are required: SciPy (1.7.1), tqdm (4.62.3), NumPy (1.22.4), Pandas (1.3.4), Seaborn (0.12.2), Matplotlib (3.4.3), Scikit-Learn (1.0.1), h5py (3.7.0), librosa (0.10.0). Python version is 3.8.20.
@@ -38,6 +37,7 @@ The data file folder stores the **experimentally measured data**. It will also s
 #### III. The code in RC_Arrhythmia.py would take a lot of time, about 3-4 days (we use the AMD Ryzen 5800H and the Intel Core i5-14600KF).
 
 #### IV. The librosa library (used in RC_Voice_Sim.py) often meets the problem: osError cannot load library 'libsndfile.dll':error 0x7e. To solve this problem, you may have to manually do the following steps: (1) locate the directory which reports the error (when using anaconda to create an environment, it is most likely .conda/envs/your_env_name/Lib/site-packages); (2) create a folder named _soundfile_data in the directory; (3) put the file libsndfile_64bit.dll (provided in this repository) in the _soundfile_data folder. After the above procedures, run the code again to check if the problem is fixed.
+
 
 
 
